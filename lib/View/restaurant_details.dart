@@ -26,27 +26,23 @@ class RestaurantDetails extends StatelessWidget {
           ),
           child: ListView(
             children: [
-              Stack(
-                children: [
-                  Container(
-                    width: double.infinity,
-                    height: 250,
-                    alignment: Alignment.topLeft,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: NetworkImage(restaurant.photograph),
-                          fit: BoxFit.contain),
-                    ),
-                    child: IconButton(
-                      onPressed: () {
-                        Get.back();
-                      },
-                      icon: const Icon(
-                        Icons.arrow_back_ios_new_outlined,
-                      ),
-                    ),
+              Container(
+                width: double.infinity,
+                height: 300,
+                alignment: Alignment.topLeft,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage(restaurant.photograph),
+                      fit: BoxFit.cover),
+                ),
+                child: IconButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                  icon: const Icon(
+                    Icons.arrow_back_ios_new_outlined,
                   ),
-                ],
+                ),
               ),
               RestaurantName(restaurant: restaurant),
               Padding(

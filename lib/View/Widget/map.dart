@@ -11,7 +11,7 @@ class MapView {
     if (await canLaunchUrl(googleUrl)) {
       await launchUrl(googleUrl);
     } else {
-      Get.snackbar("Somethink Error", "Not Support Map");
+      Get.snackbar("Something Error", "Could not Open the Map");
       throw 'Could not Open the Map';
     }
   }
