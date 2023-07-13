@@ -58,12 +58,5 @@ class LoginController extends GetxController {
     }
   }
 
-  clearSavedData(context) async {
-    final sharedPrefrence = await SharedPreferences.getInstance();
-    sharedPrefrence.remove('email');
-    sharedPrefrence.remove('password');
 
-    // Navigator.push(
-    //     context, MaterialPageRoute(builder: (context) => Homepage()));
-  }
 }
